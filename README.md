@@ -1,5 +1,3 @@
-
-```
 # Operation_Invisible
 
 ![Language](https://img.shields.io/badge/Language-C%2B%2B17-blue.svg) ![Type](https://img.shields.io/badge/Implementation-Bitwise_Logic-orange.svg) ![License](https://img.shields.io/badge/License-MIT-green.svg)
@@ -161,8 +159,6 @@ This project was created to demonstrate proficiency in **System Architecture**, 
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE]([https://www.apache.org/licenses/LICENSE-2.0]) file for details.
-
-```
+This project is licensed under the MIT License - see the [LICENSE](https://www.apache.org/licenses/) file for details.
 
 ```
