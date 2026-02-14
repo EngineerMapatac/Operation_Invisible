@@ -36,3 +36,23 @@ struct BMPInfoHeader {
     // ... compression and size fields omitted for brevity
 };
 #pragma pack(pop)
+
+
+// From src/StegoCore.cpp
+void StegoCore::embedByte(uint8_t* pixelData, char secretChar, int offset) {
+    // Iterate through all 8 bits of the character
+    for (int i = 0; i < 8; i++) {
+        
+        // Step 1: Isolate the i-th bit of the secret character
+        // Example: If char is 'A' (01000001), get the bit at position i
+        int bitToHide = (secretChar >> i) & 1;
+
+        // Step 2: Clear the LSB of the current image byte
+        // Using bitwise AND with 0xFE (Mask: 1111 1110)
+        pixelData[offset + i] &= 0xFE; 
+
+        // Step 3: Insert the secret bit
+        // Using bitwise OR to place the bit into the LSB slot
+        pixelData[offset + i] |= bitToHide;
+    }
+}
